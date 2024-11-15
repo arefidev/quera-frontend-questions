@@ -1,0 +1,43 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+details {
+  background-color: #e4eaef;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+details > summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+details > p {
+  background-color: #30353b;
+  color: #fff9f1;
+  border-radius: 5px;
+  padding: 8px;
+  opacity: 0;
+  animation: fadeIn 1s;
+  margin: 0;
+}
+
+details[open] > p {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
